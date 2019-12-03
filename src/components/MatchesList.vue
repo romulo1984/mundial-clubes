@@ -15,11 +15,6 @@ export default {
   },
   components: {
     MatchItem
-  },
-  computed: {
-    computedPhases () {
-      return []
-    }
   }
 }
 </script>
