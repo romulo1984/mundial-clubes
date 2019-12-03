@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-12 text-center small">
         <div class="match-item-datetime">
-          <strong>{{ match.fields.arena }}</strong> |
-          {{ moment(match.fields.datetime).format('dddd[,] DD/MM/YYYY [às] HH:mm') }}
+          {{ match.fields.arena }} |
+          <span style="font-weight: 100">{{ moment(match.fields.datetime).format('dddd[,] DD/MM/YYYY [às] HH:mm') }}</span>
         </div>
       </div>
     </div>
@@ -57,6 +57,7 @@ export default {
     padding-top: 10px;
   }
   .match-item-datetime {
+    font-size: 12px;
     @media (max-width: 575px) {
       position: relative;
       border: none;
