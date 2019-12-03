@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build:wc": "vue-cli-service build --target wc --inline-vue --name mundial-clubes 'src/App.vue'"
+    "change-demo-filename": "cp ./dist/demo.html ./dist/index.html",
+    "build:wc": "vue-cli-service build --target wc --inline-vue --name mundial-clubes 'src/App.vue' && npm run change-demo-filename"
   },
   "dependencies": {
     "contentful": "^7.10.0",
