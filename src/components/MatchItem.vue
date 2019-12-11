@@ -45,9 +45,11 @@ export default {
   },
   computed: {
     guestScore () {
+      console.warn(this.match.fields.guestScore)
       return this.match.fields.guestScore === undefined ? '-' : this.match.fields.guestScore
     },
     hostScore () {
+      console.warn(this.match.fields.hostScore)
       return this.match.fields.hostScore === undefined ? '-' : this.match.fields.hostScore
     }
   }
