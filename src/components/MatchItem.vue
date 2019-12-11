@@ -14,11 +14,11 @@
         <TeamItem :team="match.fields.host" badge-side="right"/>
       </div>
       <div class="col-sm-1 col-4 align-self-center text-right py-2">
-        <strong>{{ match.fields.hostScore || '-' }}</strong>
+        <strong>{{ hostScore }}</strong>
       </div>
       <div class="col-sm-1 col-4 text-center align-self-center">x</div>
       <div class="col-sm-1 col-4 align-self-center py-2">
-        <strong>{{ match.fields.guestScore || '-' }}</strong>
+        <strong>{{ guestScore }}</strong>
       </div>
       <div class="col-sm-4 mx-3 mx-sm-0">
         <TeamItem :team="match.fields.guest"/>
@@ -42,6 +42,14 @@ export default {
   },
   methods: {
     moment
+  },
+  computed: {
+    guestScore () {
+      return this.match.fields.guestScore === undefined ? '-' : this.match.fields.guestScore
+    },
+    hostScore () {
+      return this.match.fields.hostScore === undefined ? '-' : this.match.fields.hostScore
+    }
   }
 }
 </script>
