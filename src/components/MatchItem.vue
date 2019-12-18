@@ -9,18 +9,34 @@
       </div>
     </div>
 
-    <div class="row d-flex justify-content-center pb-3 mt-3">
-      <div class="col-sm-4 text-right mx-3 mx-sm-0">
-        <TeamItem :team="match.fields.host" badge-side="right"/>
+    <div class="row d-flex d-sm-none justify-content-center pb-3 mt-3">
+      <div class="col-6 text-left pl-4">
+        <TeamItem :team="match.fields.host"/>
       </div>
-      <div class="col-sm-1 col-4 align-self-center text-right py-2">
+      <div class="col-6 text-right pr-4">
+        <TeamItem :team="match.fields.guest" badge-side="right"/>
+      </div>
+      <div class="col-4 align-self-center text-right py-2">
         <strong>{{ hostScore }}</strong>
       </div>
-      <div class="col-sm-1 col-4 text-center align-self-center">x</div>
-      <div class="col-sm-1 col-4 align-self-center py-2">
+      <div class="col-4 text-center align-self-center">x</div>
+      <div class="col-4 align-self-center py-2">
         <strong>{{ guestScore }}</strong>
       </div>
-      <div class="col-sm-4 mx-3 mx-sm-0">
+    </div>
+
+    <div class="row d-none d-sm-flex justify-content-center pb-3 mt-3">
+      <div class="col-sm-4 text-right mx-0">
+        <TeamItem :team="match.fields.host" badge-side="right"/>
+      </div>
+      <div class="col-1 align-self-center text-right py-2">
+        <strong>{{ hostScore }}</strong>
+      </div>
+      <div class="col-1 text-center align-self-center">x</div>
+      <div class="col-1 align-self-center py-2">
+        <strong>{{ guestScore }}</strong>
+      </div>
+      <div class="col-4 mx-0">
         <TeamItem :team="match.fields.guest"/>
       </div>
     </div>
